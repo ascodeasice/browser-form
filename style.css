@@ -1,0 +1,19 @@
+:root {
+  --fontSize: 1.5rem;
+}
+
+label {
+  white-space: nowrap;
+}
+
+/* TODO for required inputs, show red border after focused and not filling in */
+input:invalid {
+  border: 2px red solid;
+}
+
+#formContainer {
+  display: grid;
+  row-gap: 10px;
+  column-gap: 10px;
+  grid-template-columns: min-content min-content;
+}
