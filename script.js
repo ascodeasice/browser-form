@@ -5,10 +5,6 @@ const password = document.getElementById("password");
 const passwordConf = document.getElementById("passwordConf");
 const specialCharRegex = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
 
-// function isValidUSZip(sZip) {
-//   return /^\d{5}(-\d{4})?$/.test(sZip);
-// }
-
 //validation for email
 email.addEventListener("input", () => {
   if (email.validity.valueMissing) {
@@ -53,10 +49,6 @@ password.addEventListener("input", () => {
     password.setCustomValidity("password is required");
     password.reportValidity();
   }
-  else if (password.validity.tooShort) {
-    password.setCustomValidity("password is too short(at least 8)");
-    password.reportValidity();
-  }
   else if (!/\d/.test(password.value)) {
     password.setCustomValidity("password need to contain at least one number");
     password.reportValidity();
@@ -71,6 +63,10 @@ password.addEventListener("input", () => {
   }
   else if (!/[a-z]/.test(password.value)) {
     password.setCustomValidity("password need to contain at least one lowercase character");
+    password.reportValidity();
+  }
+  else if (password.validity.tooShort) {
+    password.setCustomValidity("password is too short(at least 8)");
     password.reportValidity();
   }
   else {

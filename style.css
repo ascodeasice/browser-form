@@ -1,19 +1,51 @@
 :root {
   --fontSize: 1.5rem;
+  --blue: #A5BECC;
+  --deepBlue: #243A73;
+  --textColor: #F2EBE9;
+  --purple: #7C3E66;
+}
+
+body {
+  background: var(--blue);
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 1fr;
+  font-size: 1.5rem;
+}
+
+input {
+  height: 1.5rem;
 }
 
 label {
   white-space: nowrap;
 }
 
-/* TODO for required inputs, show red border after focused and not filling in */
-input:invalid {
+button {
+  width: 7rem;
+  height: 2rem;
+  background-color: var(--deepBlue);
+  color: var(--textColor);
+  border: none;
+}
+
+input:invalid:not(:placeholder-shown) {
   border: 2px red solid;
 }
 
 #formContainer {
+  padding: 20px;
+  width: 30vw;
+  height: 60vh;
+  background-color: var(--textColor);
   display: grid;
   row-gap: 10px;
   column-gap: 10px;
   grid-template-columns: min-content min-content;
+  grid-auto-rows: 1fr;
 }

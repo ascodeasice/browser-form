@@ -10,18 +10,18 @@
 </head>
 
 <body>
-  <form>
+  <form id="browserForm">
     <div id="formContainer">
       <label for="email">Email:</label>
-      <input id="email" type="email" required>
+      <input id="email" type="email" required placeholder="example@mail.com">
       <label for="country">Country:</label>
-      <input id="country" type="text" required>
+      <input id="country" type="text" required placeholder=" ">
       <label for="zipCode">Zip Code:</label>
       <input id="zipCode" type="text" placeholder="90210/33701-4313" pattern="^\d{5}(-\d{4})?$" required>
       <label for="password">Password:</label>
-      <input id="password" type="password" minlength="8" required>
+      <input id="password" type="password" minlength="8" required placeholder=" ">
       <label for="passwordConf">Confirm password:</label>
-      <input id="passwordConf" type="password" required>
+      <input id="passwordConf" type="password" required placeholder=" ">
       <button id="submitBtn" type="submit">Submit</button>
     </div>
   </form>
